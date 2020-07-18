@@ -1,4 +1,4 @@
-# SIIM-ISIC-Melanoma-Classification-Kaggle-Competition-2020-
+# SIIM-ISIC-Melanoma-Classification-Kaggle-Competition
 ## Predicting malignant Skin Cancer
 The aim of this competition was to correctly identify the likeleness to represent melanoma using images of skin lesions of patients.
 
@@ -43,6 +43,6 @@ According to each image name if all the models agree that it's above a certain t
 * [https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/161497](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/161497)
 
 ## Code 
-* [Data-melanoma](Data-melnoma) contains the individual ensemble predictions
+* [Data-melanoma](Data-melanoma) contains the individual ensemble predictions
 * [data-melanoma-globbed.csv](data-melanoma-globbed.csv) contains the globbed predictions to feed into the ensembling techniques.
 * [Ensembles_melanoma.ipynb](Ensembles_melanoma.ipynb) is the python notebook containing the ensemble methods.
