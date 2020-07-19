@@ -35,12 +35,23 @@ According to each image name a Polynomial Regressor was fitted and similarly a h
 
 According to each image name if all the models agree that it's above a certain threshold (cutoff_LOW) then it predicts the maximum, if they predict its below a certain threshold (cutoff_HIGH) then predict the minimum, else predict the score of the then considered best model's prediction.
 
+### Weighted Rank Blend
+
+The area under the ROC curve is sensitive to the distribution of predictions. So according to each target prediction vector they were first ranked and then blended in the form of x1w1 + x2w2 + x3w3 .... + xnwn. 
+
+### RankData Ensemble
+
+The target metric of this competition was based on ranks rather than on actual values , therfore as long as the order of the values was fixed, the metric would stay the same.
+
+Only the rank of the predictions matters not the actual values, so two different models that give the same score could actually output completely different values. They are not even required to be in (0, 1) range. Hence by preprocessing using rankdata() from scipy.stats the LB scores may increase , but its dependent on the model's biasness. 
+
 ## Additional information 
 * Whenever a prediction was made and score was achieved, it was fed back into the dataframe as a new column, thereby increasing the data to provide a better prediction.
 
 ## References 
 * [https://www.kaggle.com/solomonk/minmax-ensemble-0-9526-lb](https://www.kaggle.com/solomonk/minmax-ensemble-0-9526-lb)
 * [https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/161497](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/161497)
+* https://www.kaggle.com/niteshx2/improve-blending-using-rankdata/data?
 
 ## Code 
 * [Data-melanoma](Data-melanoma) contains files of the individual ensemble predictions.
