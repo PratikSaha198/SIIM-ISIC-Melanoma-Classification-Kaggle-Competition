@@ -23,23 +23,23 @@ But due to reasons like :
 Therefore a solo model couldn't achieve a high LB score and an ensemble had to be used.
 
 ## Ensemble Techniques implemented 
-### Linear Regression 
+### 1. Linear Regression 
 
 According to each image name a Linear Regressor was fitted and higher future score was predicted accordingly.
 
-### Polynomial Regression
+### 2. Polynomial Regression
 
 According to each image name a Polynomial Regressor was fitted and similarly a higher future score was made to be predicted.
 
-### MinMax Ensemble
+### 3. MinMax Ensemble
 
 According to each image name if all the models agree that it's above a certain threshold (cutoff_LOW) then it predicts the maximum, if they predict its below a certain threshold (cutoff_HIGH) then predict the minimum, else predict the score of the then considered best model's prediction.
 
-### Weighted Rank Blend
+### 4. Weighted Rank Blend
 
 The area under the ROC curve is sensitive to the distribution of predictions. So according to each target prediction vector they were first ranked and then blended in the form of x1w1 + x2w2 + x3w3 .... + xnwn. 
 
-### RankData Ensemble
+### 5. RankData Ensemble
 
 The target metric of this competition was based on ranks rather than on actual values , therfore as long as the order of the values was fixed, the metric would stay the same.
 
